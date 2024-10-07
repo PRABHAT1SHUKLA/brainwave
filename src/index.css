@@ -85,3 +85,20 @@
 .-rotate-360 {
   @apply rotate-[-360deg];
 }
+
+body {
+  padding: 24px;
+  font-family: sans-serif;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 16px 0;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 6px 12px -1px rgba(0, 0, 0, 0.24);
+}
+
+.accordion__item {
+  padding: 8px 16px;
+}
