@@ -113,3 +113,13 @@ body {
   border: 1px solid #ccc;    /* Optional: Adds a border */
 }
 
+#app {
+  height: 100%; /* In Vite, the root div is usually #app */
+  display: flex;
+  justify-content: center; /* Optional: Centers horizontally */
+  align-items: center;     /* Optional: Centers vertically */
+}
+
+
+
+
