@@ -102,3 +102,14 @@ body {
 .accordion__item {
   padding: 8px 16px;
 }
+
+.accordion__header {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 50px;            /* Adjust the height if needed */
+  cursor: pointer;         /* Makes the header clickable */
+   /* Optional: Adds background */
+  border: 1px solid #ccc;    /* Optional: Adds a border */
+}
+
