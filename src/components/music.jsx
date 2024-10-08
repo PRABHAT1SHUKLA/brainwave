@@ -15,7 +15,7 @@ const sampleTracks = [
 const AnimatedText = ({ children, delay = 0 }) => {
   const controls = useAnimation()
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref)
 
   useEffect(() => {
     if (inView) {
