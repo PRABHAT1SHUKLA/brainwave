@@ -29,6 +29,28 @@ const AnimatedText = ({ children, delay = 0 }) => {
   )
 }
 
+const Step = ({ number, title, description }) => (
+  <motion.div
+    className="flex items-start space-x-4"
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 10, delay: number * 0.2 }}
+    viewport={{ once: true }}
+  >
+    <motion.div
+      className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold"
+      whileHover={{ scale: 1.2, rotate: 360 }}
+      transition={{ duration: 0.5 }}
+    >
+      {number}
+    </motion.div>
+    <div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-300">{description}</p>
+    </div>
+  </motion.div>
+)
+
 const Features =[
   {
     icon : <FiAnchor/>,
@@ -106,6 +128,33 @@ export default function Testing(){
        }
    </div>
        
+   <section id="how-it-works" className="container mx-auto px-4 py-20 relative z-10">
+        <AnimatedText>
+          <h2 className="text-4xl font-bold text-center mb-12">How It Works</h2>
+        </AnimatedText>
+        <div className="space-y-8">
+          <Step
+            number={1}
+            title="Choose Your Style"
+            description="Select from a variety of genres and moods to inspire your AI-generated composition"
+          />
+          <Step
+            number={2}
+            title="Customize Parameters"
+            description="Adjust tempo, key, and other musical elements to fine-tune your creation"
+          />
+          <Step
+            number={3}
+            title="Generate and Edit"
+            description="Let the AI create a base track, then edit and refine it to your liking"
+          />
+          <Step
+            number={4}
+            title="Share Your Masterpiece"
+            description="Export your finished track and share it with the world"
+          />
+        </div>
+      </section>
      
 
 
