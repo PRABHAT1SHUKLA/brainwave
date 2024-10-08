@@ -47,7 +47,7 @@ const FeatureCard = ({ icon, title, description }) => (
     <motion.div
       initial={{ rotateY: 0 }}
       animate={{ rotateY: 360 }}
-      transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
     >
       {icon}
     </motion.div>
