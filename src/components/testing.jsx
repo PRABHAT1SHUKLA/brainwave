@@ -34,7 +34,7 @@ const Step = ({ number, title, description }) => (
     className="flex items-start space-x-4"
     initial={{ opacity: 0, x: -50 }}
     whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 10, delay: number * 0.2 }}
+    transition={{ duration: 1, delay: number * 0.2 }}
     viewport={{ once: true }}
   >
     <motion.div
@@ -98,10 +98,12 @@ export default function Testing(){
             <div className='text-3xl font-bold space-x-5'>
             <motion.div
              initial={{ rotateY: 0 }}
-             animate={{ rotateY: 360 }}
+             animate={{ rotateX: 360 }}
              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
             >
               <FiCloudLightning />
+
+              joo
                
             </motion.div>
             <AnimatedText> SLASH</AnimatedText>
@@ -109,7 +111,16 @@ export default function Testing(){
 
              <nav>
               <AnimatedText>
-                Whatsup
+              <motion.div
+             initial={{ rotateY: 0 }}
+             animate={{ rotateX: 360 }}
+             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            >
+             
+               
+             Whatsup
+            </motion.div>
+
               </AnimatedText>
 
             </nav> 
